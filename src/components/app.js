@@ -81,8 +81,10 @@ export default class App extends Component {
 
 </form>
   {this.state.data.length==0 ? null : <h3 style={{paddingTop:20}}>Search Results</h3>}
-          {this.state.data.map(item=><ol><div className="container" style={{paddingTop:10}}>
-            <div className="thumbnail" >
+          {this.state.data.map(item=>
+            <ol>
+              <div className="container" style={{paddingTop:10}}>
+               <div className="thumbnail" >
                 {item.Poster =="N/A" ? <h4>Poster : Image not available </h4> :
                   <img src={item.Poster} style={{width:"30%"}} />}
                   <div className="caption">
